@@ -84,7 +84,18 @@ server.get("/", function(req, res){
     return res.render("index.html")
 })
  ```
- So, open your browser using the url http://127.0.0.1:3000 and the server will read and open the file *index.html*
+ So, open your browser using the url 127.0.0.1:3000 and the server will read and open the file *index.html*
+ 
+ ### Installing nunjucks
+ Nunjucks is a template engine that allowas you to work in html using inheritance, loops, macros and etc
+ To know better, try: https://imasters.com.br/front-end/nunjucks-template-engine-para-js
+ In your terminal write
+ 
+```
+npm install nunjucks
+```
+And then, insert the following code in the file *server.js*
+
  
  
 
