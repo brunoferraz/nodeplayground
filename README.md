@@ -18,6 +18,25 @@ npm -v
 ```
 These steps are import since some problem could happen. For instance, by some reason, npm have not worked in my windows instalation.
 
+## Preparing the development enviroment
+### Create directory
+```
+mkdir dojo
+cd dojo
+```
+### Init node directory
+```
+npm init -y
+```
+This command will create a a file *package.json* where will be registered the modules downloaded and installed by npm aferward
+
+### Installing server
+```
+npm install express
+```
+This command will create a folder *node_modules*, the file *package-lock.json* and will edit the file *package.json* adding the property *dependencies*. This propertie list the modules installed by npm that my project needs.
+
+
 
 
 
