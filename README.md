@@ -112,5 +112,6 @@ And then, insert the following code in the file *server.js*
 //configurar servidor para aprsentar arquivos estaticos
 server.use(express.static('public'))
 ```
+For instance, after this change, you could put index.html inside de ./public/ and keep it reachable from 127.0.0.1:3000/
 
 
