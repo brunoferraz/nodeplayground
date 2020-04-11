@@ -16,7 +16,10 @@ Also check npm
 ```
 npm -v
 ```
-These steps are import since some problem gonna happen. For some reason, npm doesnt work in my windows instalation.
+These steps are import since some problem could happen. For instance, by some reason, npm have not worked in my windows instalation.
+
+
+
 
 
 
