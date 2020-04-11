@@ -86,21 +86,31 @@ server.get("/", function(req, res){
  ```
  So, open your browser using the url 127.0.0.1:3000 and the server will read and open the file *index.html*
  
- ### Installing nunjucks
+ #### Installing nunjucks
  Nunjucks is a template engine that allowas you to work in html using inheritance, loops, macros and etc
  To know better, try: https://imasters.com.br/front-end/nunjucks-template-engine-para-js
- In your terminal write
  
+ In your terminal write 
 ```
 npm install nunjucks
 ```
 And then, insert the following code in the file *server.js*
-
- 
- 
-
-
-
-
+```
+//congurando template engine
+const nunjucks = require("nunjucks")
+nunjucks.configure("./", {
+    express: server
+})
+```
+#### Configure to find static files in a folder as them would be in the root folder
+In terminal, create a public folder
+```
+mkdir public
+```
+And then, insert the following code in the file *server.js*
+```
+//configurar servidor para aprsentar arquivos estaticos
+server.use(express.static('public'))
+```
 
 
