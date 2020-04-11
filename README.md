@@ -36,7 +36,28 @@ npm install express
 ```
 This command will create a folder *node_modules*, the file *package-lock.json* and will edit the file *package.json* adding the property *dependencies*. This propertie list the modules installed by npm that my project needs.
 
+#### Create server configs
+Create a file called **server.js** and edit it writing
+```
+//configurando o servidor
+const express = require("express")
+const server = express()
 
+//liga os servidor e permite o acesso na porta 127.0.0.1:3000
+server.listen(3000, function(){
+    console.log("SERVIDOR Funcionando")
+})
+```
+
+#### Run server by the first time
+```
+node server.js
+```
+If everything is working the prompt will show you the message "SERVIDOR funcionando"
+
+
+### Installing nodemon
+This module works monitoring files and reseting the server
 
 
 
