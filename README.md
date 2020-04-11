@@ -36,6 +36,7 @@ npm install express
 ```
 This command will create a folder *node_modules*, the file *package-lock.json* and will edit the file *package.json* adding the property *dependencies*. This propertie list the modules installed by npm that my project needs.
 
+
 #### Create server configs
 Create a file called **server.js** and edit it writing
 ```
@@ -49,15 +50,33 @@ server.listen(3000, function(){
 })
 ```
 
+
 #### Run server by the first time
 ```
 node server.js
 ```
-If everything is working the prompt will show you the message "SERVIDOR funcionando"
+If everything is working the prompt will show you the message "SERVIDOR funcionando".
+However, everytime something have been changed the server must be manually restarted in order to changes take effect. Due to avoid this the package nodemon must be installed.
 
 
-### Installing nodemon
-This module works monitoring files and reseting the server
+#### Installing nodemon
+This module works monitoring files and reseting the server always a *js or json* file have changed. To install it simply write on terminal
+```
+npm install nodemon
+```
+Edit the file *package.json* inserting the tag **start** in the **scripts** propertie. As follow:
+```
+"scripts": {
+    "start": "nodemon server.js"
+  },
+ ```
+ Now, in order to Run the server you must write
+ ```
+ npm start
+ ```
+ This will make run the command *nodemon server.js* which will monitor the files and restart server as needed
+ 
+
 
 
 
