@@ -76,6 +76,17 @@ Edit the file *package.json* inserting the tag **start** in the **scripts** prop
  ```
  This will make run the command *nodemon server.js* which will monitor the files and restart server as needed
  
+ #### Config server to read index.html
+ Edit *server.js* inserting as follow
+ ```
+ //configurando a apresentacao da pagina
+server.get("/", function(req, res){
+    return res.render("index.html")
+})
+ ```
+ So, open your browser using the url http://127.0.0.1:3000 and the server will read and open the file *index.html*
+ 
+ 
 
 
 
